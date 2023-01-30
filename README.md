@@ -2,7 +2,9 @@
 
 
 ## 1.	Introduction of Function Package
-This repo is based upon [AgileX Gazebo Simulation Package](https://github.com/agilexrobotics/ugv_gazebo_sim), which was intentionally modified for project [ALAN](https://github.com/pattylo/alan), a novel framework for autonomous dynamic landing utilizing a non-robocentric approach. 
+This repo is based upon [AgileX Gazebo Simulation Package](https://github.com/agilexrobotics/ugv_gazebo_sim), which was intentionally modified for project [ALAN](https://github.com/pattylo/alan), a novel framework for autonomous dynamic landing utilizing a non-robocentric approach. </br>
+
+! Current version does not include LED Marker Detection, which would soon be added
 
 ## 2.	Pre-requisite
 
@@ -52,7 +54,7 @@ sudo apt-get install ros-noetic-teleop-twist-keyboard
 
 ## 3.	About Usage
 
-### 1、1.	Create workspace, download simulation model function package and compile
+### Create workspace, download simulation model function package and compile
 
 ​		Open a new terminal and create a workspace named alang_ws, enter in the terminal:
 
@@ -87,7 +89,7 @@ catkin_init_workspace
 ​		Download simulation model function package
 
 ```
-git clone https://github.com/agilexrobotics/ugv_sim.git
+git clone https://github.com/HKPolyU-UAV/alan_sim.git
 ```
 
 ​		Enter the alang_ws folder
@@ -109,83 +111,21 @@ catkin_make
 
 
 
-### 2、2.	Run the star file of scout_v2 and scout_mini, and visualize the urdf file in Rviz
+### Run the star file of scout_v2 and scout_mini, and visualize the urdf file in Rviz
 
 ​	Enter the alang_ws folder
 
 ```
-cd alang_ws
+cd alang_ws/src/alan_sim
 ```
 
-​	Declare the environment variable
+​	Run sim.sh
 
 ```
-source devel/setup.bash
+./sim.sh
 ```
 
-​	Run the start file of scout_v2 model and visualize the model in Rviz
+​	Start the simulation environment of one UGV and one UAV, as shown below.
+</br>
 
-```
-roslaunch scout_description display_scout_v2.launch 
-```
-
-![img](image/scoutv2_rviz.png) 
-
-​	Run the start file of scout_mini model and visualize the model in Rviz
-
-```
-roslaunch scout_description display_scout_mini.launch 
-```
-
-![img](image/scout_mini_rviz.png) 
-
-### 3、3.	Start the gazebo simulation environment of scout_v2 and scout_mini and control scout_v2 and scout_mini movement in the gazebo
-
-​	Enter the alang_ws folder
-
-```
-cd alang_ws
-```
-
-​	Declare the environment variable
-
-```
-source devel/setup.bash
-```
-
-​	Start the simulation environment of scout_v2
-
-```
-roslaunch scout_gazebo_sim scout_empty_world.launch
-```
-
-![img](image/scoutv2_gazebo.png) 
-
-#Control by keyboard, the scout2.0 and scout_mini can be controlled to move forward, left, right and backward through "i", "j", "l",and "," on the keyboard
-
-```
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
-```
-
-![img](image/teleop.png) 
-
-​	Start the simulation environment of scout_mini
-
-```
-roslaunch scout_gazebo_sim scout_mini_playpen.launch
-```
-
-![img](image/scout_mini_gazebo.png) 
-
-#Control by keyboard, the scout2.0 and scout_mini can be controlled to move forward, left, right and backward through "i", "j", "l",and "," on the keyboard
-
-```
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
-```
-
-![img](image/teleop.png) 
-
-
-
- 
-
+![img](images/uav_ugv.png) 
