@@ -111,7 +111,7 @@ catkin_make
 
 
 
-### Run the star file of scout_v2 and scout_mini, and visualize the urdf file in Rviz
+### Run it!
 
 ​	Enter the alang_ws folder
 
