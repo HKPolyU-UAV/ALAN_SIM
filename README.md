@@ -2,7 +2,7 @@
 
 
 ## 1.	Introduction of Function Package
-This repo is based upon [AgileX Gazebo Simulation Package](https://github.com/agilexrobotics/ugv_gazebo_sim), which was intentionally modified for project [ALAN](https://github.com/pattylo/alan), a novel framework for autonomous dynamic landing utilizing a non-robocentric approach. </br>
+This repo is based upon [AgileX Gazebo Simulation Package](https://github.com/agilexrobotics/ugv_gazebo_sim), which was intentionally modified for project [ALAN](https://github.com/pattylo/alan), a framework for autonomous dynamic landing utilizing a non-robocentric approach. </br>
 
 ! Current version does not include LED Marker Detection, which would soon be added
 
