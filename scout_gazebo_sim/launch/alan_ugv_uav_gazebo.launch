@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <launch>
     <!-- PX4 SITL and Gazebo -->
-    <arg name="x" default="2"/>
-    <arg name="y" default="2"/>
+    <arg name="x" default="4"/>
+    <arg name="y" default="0"/>
     <arg name="z" default="0"/>
     <arg name="R" default="0"/>
     <arg name="P" default="0"/>
