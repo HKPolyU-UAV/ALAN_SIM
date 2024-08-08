@@ -68,8 +68,7 @@
 	<arg name="fcu_protocol" default="v2.0" />
 	<arg name="respawn_mavros" default="false" />
 
-	<group ns = "/uav">
-
+    <group ns = "/uav">
 	<include file="$(find mavros)/launch/node.launch">
 		<arg name="pluginlists_yaml" value="$(find mavros)/launch/px4_pluginlists.yaml" />
 		<arg name="config_yaml" value="$(find mavros)/launch/px4_config.yaml" />
@@ -82,7 +81,9 @@
 		<arg name="fcu_protocol" value="$(arg fcu_protocol)" />
 		<arg name="respawn_mavros" default="$(arg respawn_mavros)" />
 	</include>
+    </group>
 
-	</group>    
+    <node name="scout_pose_gazebo" pkg="scout_gazebo_sim" type="scout_pose_gazebo" output="screen">
+    </node> 
 
 </launch>

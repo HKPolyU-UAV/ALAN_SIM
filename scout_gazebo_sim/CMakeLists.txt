@@ -35,6 +35,9 @@ target_link_libraries(scout_gazebo ${catkin_LIBRARIES})
 add_executable(scout_skid_steer_controller src/scout_skid_steer_controller.cpp)
 target_link_libraries(scout_skid_steer_controller scout_gazebo ${catkin_LIBRARIES})
 
+add_executable(scout_pose_gazebo src/scout_pose_gazebo.cpp)
+target_link_libraries(scout_pose_gazebo ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
