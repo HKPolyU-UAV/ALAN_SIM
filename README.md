@@ -129,3 +129,6 @@ cd alang_ws/src/alan_sim
 </br>
 
 ![img](images/uav_ugv.png) 
+
+### Maintainer
+[Patrick Lo](https://github.com/pattylo) @ AIRo-Lab, RCUAS, PolyU: patty.lo@connect.polyu.hk <br/> 
